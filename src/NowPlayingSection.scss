@@ -683,6 +683,7 @@ body.lyrics-exclusive, body.video-exclusive {
 		top: calc(100svh - 200px);
 		padding-bottom: 15px;
 		background: var(--md-sys-color-background);
+		border-radius: 20px;
 		height: calc(100% - 72px) !important;
 		transition: top 0.5s ease;
 		z-index: 3;
