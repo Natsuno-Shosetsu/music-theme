@@ -682,7 +682,10 @@ body.lyrics-exclusive, body.video-exclusive {
 		top: calc(100vh - 200px);
 		top: calc(100svh - 200px);
 		padding-bottom: 15px;
-		background: var(--md-sys-color-background);
+		background-color: transparent;
+		border: 1px solid rgba(255, 255, 255, .2);
+    	-webkit-backdrop-filter: blur(20px);
+    	backdrop-filter: blur(20px);
 		border-radius: 30px;
 		height: calc(100% - 72px) !important;
 		transition: top 0.5s ease;
