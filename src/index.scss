@@ -26,6 +26,105 @@ body {
 	height: 100%;
 }
 
+#background {
+    position: fixed;
+    z-index: -2;
+    background-color: var(--md-sys-color-on-tertiary-container, #242424);
+    will-change: filter;
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    width: calc(100lvw + 60px);
+    height: calc(100lvh + 60px)
+}
+
+#background .background-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: animation;
+    animation-direction: alternate-reverse;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes animation{
+    0%
+    {
+        background-image: url(https://s23.moe/assets/69618131_p0-921b5129.webp);
+    }
+    20%
+    {
+        background-image: url(https://s23.moe/assets/69618131_p1-0eab8e6f.webp);
+    }
+    40%
+    {
+        background-image: url(https://s23.moe/assets/69618131_p0-921b5129.webp);
+    }
+    60%
+    {
+        background-image: url(https://s23.moe/assets/69618131_p1-0eab8e6f.webp);
+    }
+    80%
+    {
+        background-image: url(https://s23.moe/assets/69618131_p0-921b5129.webp);
+    }
+    100%
+    {
+        background-image: url(https://s23.moe/assets/69618131_p1-0eab8e6f.webp);
+    }
+}
+
+@supports (animation-timeline: scroll(root y)) {
+    #background {
+        animation: background-blur-dim auto linear;
+        animation-fill-mode: both;
+        animation-timeline: scroll(root y);
+        animation-range-start: 10vh;
+        animation-range-end: 30vh
+    }
+
+    @keyframes background-blur-dim {
+        0% {
+            filter: blur(0px) brightness(1)
+        }
+
+        to {
+            filter: blur(10px) brightness(.7)
+        }
+    }
+}
+
+@supports not (animation-timeline: scroll(root y)) {
+    #background {
+        --blur: clamp(0px, calc(50px * var(--scroll-y-percent, 0) + -5px), 10px);
+        --brightness: clamp(.7, calc(-1.5 * var(--scroll-y-percent, 0) + 1.15), 1);
+        filter: blur(var(--blur)) brightness(var(--brightness))
+    }
+}
+body:not(.touch-device) #background {
+    --multiplier: clamp(0, calc(-5 * var(--scroll-y-percent, 0) + 1.5), 1);
+    transform: translate(calc(var(--tx, 0) * var(--multiplier, 1)),calc(var(--ty, 0) * var(--multiplier, 1)));
+    transition: transform .1s linear 0s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
 a {
 	font-weight: 500;
 	//color: #646cff;
