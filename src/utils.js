@@ -27,7 +27,7 @@ const mdTokens = [
 	['surface-container-highest', 'neutral', 90, 22],
 	['surface-variant', 'neutralVariant', 90, 30],
 	['on-surface', 'neutral', 10, 90],
-	['on-surface-variant', 'neutralVariant', 30, 80],
+	['on-surface-variant', 'neutralVariant', 100, 20],
 	['inverse-surface', 'neutral', 20, 90],
 	['inverse-on-surface', 'neutral', 95, 20],
 	['background', 'neutral', 98, 6],
