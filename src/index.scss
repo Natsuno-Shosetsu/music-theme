@@ -19,7 +19,7 @@
 
 body {
 	color: var(--md-sys-color-on-background);
-	background-color: var(--md-sys-color-background);
+	background-color: transparent;
 	padding: 0;
 	margin: 0;
 	width: 100%;
@@ -92,7 +92,7 @@ body {
 
     @keyframes background-blur-dim {
         0% {
-            filter: blur(0px) brightness(1)
+            filter: blur(10px) brightness(1)
         }
 
         to {
