@@ -124,7 +124,6 @@
 
 
 	&.outlined {
-		border: 1px solid var(--md-sys-color-outline);
 		color: var(--md-sys-color-primary);
 		--ripple-color: var(--md-sys-color-primary);
 		&::before {
