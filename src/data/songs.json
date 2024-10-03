@@ -1,5 +1,25 @@
 [
     {
+        "name": "Canary / relier feat.TORi",
+        "artist": "relier",
+        "singer": "TORi",
+        "translatedName": "只想说一声",
+        "length": "3:11",
+        "type": "Favorite",
+        "hasLyrics": "Yes",
+        "album": "",
+        "releaseDate": "2023-06-11T00:00:00.000Z",
+        "link": "https://www.youtube.com/watch?v=sNcDYUHB0FI",
+        "desc": "/",
+        "staff": "Vocal：TORi @Hatsune Miku",
+        "fileName": "Canary / relier feat.TORi.flac",
+        "quality": "Lossless",
+        "highestQuality": "Yes",
+        "note": null,
+        "hidden": null,
+        "cover": "tori.jpg"
+    },
+    {
         "name": "Hikaru-Nara (Indonesia Version)",
         "artist": "Okami Ken",
         "singer": "Okami,Rainych,dejalto",
