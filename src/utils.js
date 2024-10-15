@@ -84,7 +84,7 @@ const songs = songsRaw.map((song) => {
 	short.hash = md5(short.name + short.length).slice(0, 8);
 	if (typeof(short.releaseDate) === 'number' && short.releaseDate < 10000000000) short.releaseDate *= 1000;
 	short.releaseDate = new Date(short.releaseDate);
-	short.videoURL = `//mimi-radio-files.s23.moe/` + short.fileName;
+	short.videoURL = `` + short.fileName;
 	return short;
 })).map((song) => {
 	if (song.hasLyrics) song.hasLyrics = song.hasLyrics.toLowerCase() === 'yes' ? true : false;

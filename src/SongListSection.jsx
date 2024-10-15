@@ -73,7 +73,7 @@ export function SongListSection(props) {
 						buttons={[
 							{label: 'Standalone', value: 'standalone', selected: selectedTypes.includes('standalone')},
 							{label: 'Favorite', value: 'favorite', selected: selectedTypes.includes('favorite')},
-							{label: 'Short', value: 'short', selected: selectedTypes.includes('short')},
+							{label: 'Vocaloid', value: 'Vocaloid', selected: selectedTypes.includes('short')},
 						]}
 						multiple={true}
 						setSelected={setSelectedTypes}
