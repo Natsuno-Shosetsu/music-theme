@@ -35,9 +35,9 @@ export function Controller(props) {
 
 	useEffect(() => {
 		if (isPaused) {
-			document.title = "RenzAlt Music";
+			document.title = "Alts Music";
 		} else {
-			document.title = `RenzAlt Music | ${queueManager.currentSong?.name ?? "MIMI Radio"} - ${queueManager.currentSong?.artist}`;
+			document.title = `Alts Music | ${queueManager.currentSong?.name ?? "MIMI Radio"} - ${queueManager.currentSong?.artist}`;
 		}
 	}, [queueManager.currentSong, isPaused]);
 
